@@ -1,0 +1,182 @@
+2024-08-19 18:02:30,805 ::DataConnectionModule-> root - INFO - DataConn initialize with the schema: fedepr2345_coderhouse
+2024-08-19 18:02:30,806 ::DataConnectionModule-> root - INFO - DataRetriever initialized with endpoint: https://fakestoreapi.com/products
+2024-08-19 18:02:30,806 ::DataConnectionModule-> root - INFO - Empezando a anonimizar los datos.
+2024-08-19 18:02:30,806 ::DataConnectionModule-> root - INFO - Intentado recuperar data de la API.
+2024-08-19 18:02:31,879 ::DataConnectionModule-> root - INFO - Data obtenida:    id                                              title  ...                                              image                       rating
+0   1  Fjallraven - Foldsack No. 1 Backpack, Fits 15 ...  ...  https://fakestoreapi.com/img/81fPKd-2AYL._AC_S...  {'rate': 3.9, 'count': 120}
+1   2             Mens Casual Premium Slim Fit T-Shirts   ...  https://fakestoreapi.com/img/71-3HjGNDUL._AC_S...  {'rate': 4.1, 'count': 259}
+2   3                                 Mens Cotton Jacket  ...  https://fakestoreapi.com/img/71li-ujtlUL._AC_U...  {'rate': 4.7, 'count': 500}
+3   4                               Mens Casual Slim Fit  ...  https://fakestoreapi.com/img/71YXzeOuslL._AC_U...  {'rate': 2.1, 'count': 430}
+4   5  John Hardy Women's Legends Naga Gold & Silver ...  ...  https://fakestoreapi.com/img/71pWzhdJNwL._AC_U...  {'rate': 4.6, 'count': 400}
+
+[5 rows x 7 columns]
+2024-08-19 18:02:31,935 ::DataConnectionModule-> root - INFO - Data anonymize:    id                                             titulo  precio  ...       categoria                                             imagen fecha_ingesta
+0   1  Fjallraven - Foldsack No. 1 Backpack, Fits 15 ...  109.95  ...  men's clothing  https://fakestoreapi.com/img/81fPKd-2AYL._AC_S...    2024-08-19
+1   2             Mens Casual Premium Slim Fit T-Shirts    22.30  ...  men's clothing  https://fakestoreapi.com/img/71-3HjGNDUL._AC_S...    2024-08-19
+2   3                                 Mens Cotton Jacket   55.99  ...  men's clothing  https://fakestoreapi.com/img/71li-ujtlUL._AC_U...    2024-08-19
+3   4                               Mens Casual Slim Fit   15.99  ...  men's clothing  https://fakestoreapi.com/img/71YXzeOuslL._AC_U...    2024-08-19
+4   5  John Hardy Women's Legends Naga Gold & Silver ...  695.00  ...        jewelery  https://fakestoreapi.com/img/71pWzhdJNwL._AC_U...    2024-08-19
+
+[5 rows x 7 columns]
+2024-08-19 18:02:31,935 ::DataConnectionModule-> root - INFO - Anonymized data retrieved with columns: ['id', 'titulo', 'precio', 'descripcion', 'categoria', 'imagen', 'fecha_ingesta']
+2024-08-19 18:02:31,949 ::DataConnectionModule-> root - INFO - Redshift Connection Settings:: {'REDSHIFT_USERNAME': 'fedepr2345_coderhouse', 'REDSHIFT_PASSWORD': '5W9Nsos3e4', 'REDSHIFT_HOST': 'data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com', 'REDSHIFT_PORT': '5439', 'REDSHIFT_DBNAME': 'data-engineer-database'}
+2024-08-19 18:02:31,949 ::DataConnectionModule-> root - INFO - DataConn initialize with the schema: public
+2024-08-19 18:02:32,027 ::DataConnectionModule-> root - INFO - Connecting to Redshift at data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com:5439 as fedepr2345_coderhouse
+2024-08-19 18:02:34,467 ::DataConnectionModule-> root - ERROR - Failed to create connection: (psycopg2.errors.UndefinedObject) unrecognized configuration parameter "standard_conforming_strings"
+
+[SQL: show standard_conforming_strings]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-08-19 18:02:34,467 ::DataConnectionModule-> root - ERROR - Error establishing a connection to the database: Failed to create a connection to Redshift.
+2024-08-19 18:02:34,468 ::DataConnectionModule-> root - INFO - Data uploaded to -> fedepr2345_coderhouse.products
+2024-08-19 18:02:34,468 ::DataConnectionModule-> root - WARNING - No active connection to close.
+2024-08-19 18:05:05,464 ::DataConnectionModule-> root - INFO - DataConn initialize with the schema: fedepr2345_coderhouse
+2024-08-19 18:05:05,464 ::DataConnectionModule-> root - INFO - DataRetriever initialized with endpoint: https://fakestoreapi.com/products
+2024-08-19 18:05:05,464 ::DataConnectionModule-> root - INFO - Empezando a anonimizar los datos.
+2024-08-19 18:05:05,464 ::DataConnectionModule-> root - INFO - Intentado recuperar data de la API.
+2024-08-19 18:05:06,284 ::DataConnectionModule-> root - INFO - Data obtenida:    id                                              title  ...                                              image                       rating
+0   1  Fjallraven - Foldsack No. 1 Backpack, Fits 15 ...  ...  https://fakestoreapi.com/img/81fPKd-2AYL._AC_S...  {'rate': 3.9, 'count': 120}
+1   2             Mens Casual Premium Slim Fit T-Shirts   ...  https://fakestoreapi.com/img/71-3HjGNDUL._AC_S...  {'rate': 4.1, 'count': 259}
+2   3                                 Mens Cotton Jacket  ...  https://fakestoreapi.com/img/71li-ujtlUL._AC_U...  {'rate': 4.7, 'count': 500}
+3   4                               Mens Casual Slim Fit  ...  https://fakestoreapi.com/img/71YXzeOuslL._AC_U...  {'rate': 2.1, 'count': 430}
+4   5  John Hardy Women's Legends Naga Gold & Silver ...  ...  https://fakestoreapi.com/img/71pWzhdJNwL._AC_U...  {'rate': 4.6, 'count': 400}
+
+[5 rows x 7 columns]
+2024-08-19 18:05:06,332 ::DataConnectionModule-> root - INFO - Data anonymize:    id                                             titulo  precio  ...       categoria                                             imagen fecha_ingesta
+0   1  Fjallraven - Foldsack No. 1 Backpack, Fits 15 ...  109.95  ...  men's clothing  https://fakestoreapi.com/img/81fPKd-2AYL._AC_S...    2024-08-19
+1   2             Mens Casual Premium Slim Fit T-Shirts    22.30  ...  men's clothing  https://fakestoreapi.com/img/71-3HjGNDUL._AC_S...    2024-08-19
+2   3                                 Mens Cotton Jacket   55.99  ...  men's clothing  https://fakestoreapi.com/img/71li-ujtlUL._AC_U...    2024-08-19
+3   4                               Mens Casual Slim Fit   15.99  ...  men's clothing  https://fakestoreapi.com/img/71YXzeOuslL._AC_U...    2024-08-19
+4   5  John Hardy Women's Legends Naga Gold & Silver ...  695.00  ...        jewelery  https://fakestoreapi.com/img/71pWzhdJNwL._AC_U...    2024-08-19
+
+[5 rows x 7 columns]
+2024-08-19 18:05:06,332 ::DataConnectionModule-> root - INFO - Anonymized data retrieved with columns: ['id', 'titulo', 'precio', 'descripcion', 'categoria', 'imagen', 'fecha_ingesta']
+2024-08-19 18:05:06,345 ::DataConnectionModule-> root - INFO - Redshift Connection Settings:: {'REDSHIFT_USERNAME': 'fedepr2345_coderhouse', 'REDSHIFT_PASSWORD': '5W9Nsos3e4', 'REDSHIFT_HOST': 'data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com', 'REDSHIFT_PORT': '5439', 'REDSHIFT_DBNAME': 'data-engineer-database'}
+2024-08-19 18:05:06,346 ::DataConnectionModule-> root - INFO - DataConn initialize with the schema: public
+2024-08-19 18:05:06,394 ::DataConnectionModule-> root - INFO - Connecting to Redshift at data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com:5439 as fedepr2345_coderhouse
+2024-08-19 18:05:08,909 ::DataConnectionModule-> root - ERROR - Failed to create connection: (psycopg2.errors.UndefinedObject) unrecognized configuration parameter "standard_conforming_strings"
+
+[SQL: show standard_conforming_strings]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-08-19 18:05:08,909 ::DataConnectionModule-> root - ERROR - Error establishing a connection to the database: Failed to create a connection to Redshift.
+2024-08-19 18:05:08,910 ::DataConnectionModule-> root - INFO - Data uploaded to -> fedepr2345_coderhouse.products
+2024-08-19 18:05:08,910 ::DataConnectionModule-> root - WARNING - No active connection to close.2024-08-19 18:07:45,578 ::DataConnectionModule-> root - INFO - DataConn initialize with the schema: fedepr2345_coderhouse
+2024-08-19 18:07:45,578 ::DataConnectionModule-> root - INFO - DataRetriever initialized with endpoint: https://fakestoreapi.com/products
+2024-08-19 18:07:45,578 ::DataConnectionModule-> root - INFO - Empezando a anonimizar los datos.
+2024-08-19 18:07:45,578 ::DataConnectionModule-> root - INFO - Intentado recuperar data de la API.
+2024-08-19 18:07:46,615 ::DataConnectionModule-> root - INFO - Data obtenida:    id                                              title  ...                                              image                       rating
+0   1  Fjallraven - Foldsack No. 1 Backpack, Fits 15 ...  ...  https://fakestoreapi.com/img/81fPKd-2AYL._AC_S...  {'rate': 3.9, 'count': 120}
+1   2             Mens Casual Premium Slim Fit T-Shirts   ...  https://fakestoreapi.com/img/71-3HjGNDUL._AC_S...  {'rate': 4.1, 'count': 259}
+2   3                                 Mens Cotton Jacket  ...  https://fakestoreapi.com/img/71li-ujtlUL._AC_U...  {'rate': 4.7, 'count': 500}
+3   4                               Mens Casual Slim Fit  ...  https://fakestoreapi.com/img/71YXzeOuslL._AC_U...  {'rate': 2.1, 'count': 430}
+4   5  John Hardy Women's Legends Naga Gold & Silver ...  ...  https://fakestoreapi.com/img/71pWzhdJNwL._AC_U...  {'rate': 4.6, 'count': 400}
+
+[5 rows x 7 columns]
+2024-08-19 18:07:46,648 ::DataConnectionModule-> root - INFO - Data anonymize:    id                                             titulo  precio  ...       categoria                                             imagen fecha_ingesta
+0   1  Fjallraven - Foldsack No. 1 Backpack, Fits 15 ...  109.95  ...  men's clothing  https://fakestoreapi.com/img/81fPKd-2AYL._AC_S...    2024-08-19
+1   2             Mens Casual Premium Slim Fit T-Shirts    22.30  ...  men's clothing  https://fakestoreapi.com/img/71-3HjGNDUL._AC_S...    2024-08-19
+2   3                                 Mens Cotton Jacket   55.99  ...  men's clothing  https://fakestoreapi.com/img/71li-ujtlUL._AC_U...    2024-08-19
+3   4                               Mens Casual Slim Fit   15.99  ...  men's clothing  https://fakestoreapi.com/img/71YXzeOuslL._AC_U...    2024-08-19
+4   5  John Hardy Women's Legends Naga Gold & Silver ...  695.00  ...        jewelery  https://fakestoreapi.com/img/71pWzhdJNwL._AC_U...    2024-08-19
+
+[5 rows x 7 columns]
+2024-08-19 18:07:46,648 ::DataConnectionModule-> root - INFO - Anonymized data retrieved with columns: ['id', 'titulo', 'precio', 'descripcion', 'categoria', 'imagen', 'fecha_ingesta']
+2024-08-19 18:07:46,664 ::DataConnectionModule-> root - INFO - Redshift Connection Settings:: {'REDSHIFT_USERNAME': 'fedepr2345_coderhouse', 'REDSHIFT_PASSWORD': '5W9Nsos3e4', 'REDSHIFT_HOST': 'data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com', 'REDSHIFT_PORT': '5439', 'REDSHIFT_DBNAME': 'data-engineer-database'}
+2024-08-19 18:07:46,664 ::DataConnectionModule-> root - INFO - DataConn initialize with the schema: public
+2024-08-19 18:07:46,723 ::DataConnectionModule-> root - INFO - Connecting to Redshift at data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com:5439 as fedepr2345_coderhouse
+2024-08-19 18:07:47,721 ::DataConnectionModule-> root - ERROR - Failed to create connection: (psycopg2.OperationalError) connection to server at "data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com" (52.44.43.227), port 5439 failed: FATAL:  unrecognized configuration parameter "standard_conforming_strings"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-08-19 18:07:47,722 ::DataConnectionModule-> root - ERROR - Error establishing a connection to the database: Failed to create a connection to Redshift.
+2024-08-19 18:07:47,722 ::DataConnectionModule-> root - INFO - Data uploaded to -> fedepr2345_coderhouse.products
+2024-08-19 18:07:47,722 ::DataConnectionModule-> root - WARNING - No active connection to close.
+2024-08-19 18:09:06,843 ::DataConnectionModule-> root - INFO - DataConn initialize with the schema: fedepr2345_coderhouse
+2024-08-19 18:09:06,843 ::DataConnectionModule-> root - INFO - DataRetriever initialized with endpoint: https://fakestoreapi.com/products
+2024-08-19 18:09:06,843 ::DataConnectionModule-> root - INFO - Empezando a anonimizar los datos.
+2024-08-19 18:09:06,843 ::DataConnectionModule-> root - INFO - Intentado recuperar data de la API.
+2024-08-19 18:09:07,683 ::DataConnectionModule-> root - INFO - Data obtenida:    id                                              title  ...                                              image                       rating
+0   1  Fjallraven - Foldsack No. 1 Backpack, Fits 15 ...  ...  https://fakestoreapi.com/img/81fPKd-2AYL._AC_S...  {'rate': 3.9, 'count': 120}
+1   2             Mens Casual Premium Slim Fit T-Shirts   ...  https://fakestoreapi.com/img/71-3HjGNDUL._AC_S...  {'rate': 4.1, 'count': 259}
+2   3                                 Mens Cotton Jacket  ...  https://fakestoreapi.com/img/71li-ujtlUL._AC_U...  {'rate': 4.7, 'count': 500}
+3   4                               Mens Casual Slim Fit  ...  https://fakestoreapi.com/img/71YXzeOuslL._AC_U...  {'rate': 2.1, 'count': 430}
+4   5  John Hardy Women's Legends Naga Gold & Silver ...  ...  https://fakestoreapi.com/img/71pWzhdJNwL._AC_U...  {'rate': 4.6, 'count': 400}
+
+[5 rows x 7 columns]
+2024-08-19 18:09:07,726 ::DataConnectionModule-> root - INFO - Data anonymize:    id                                             titulo  precio  ...       categoria                                             imagen fecha_ingesta
+0   1  Fjallraven - Foldsack No. 1 Backpack, Fits 15 ...  109.95  ...  men's clothing  https://fakestoreapi.com/img/81fPKd-2AYL._AC_S...    2024-08-19
+1   2             Mens Casual Premium Slim Fit T-Shirts    22.30  ...  men's clothing  https://fakestoreapi.com/img/71-3HjGNDUL._AC_S...    2024-08-19
+2   3                                 Mens Cotton Jacket   55.99  ...  men's clothing  https://fakestoreapi.com/img/71li-ujtlUL._AC_U...    2024-08-19
+3   4                               Mens Casual Slim Fit   15.99  ...  men's clothing  https://fakestoreapi.com/img/71YXzeOuslL._AC_U...    2024-08-19
+4   5  John Hardy Women's Legends Naga Gold & Silver ...  695.00  ...        jewelery  https://fakestoreapi.com/img/71pWzhdJNwL._AC_U...    2024-08-19
+
+[5 rows x 7 columns]
+2024-08-19 18:09:07,726 ::DataConnectionModule-> root - INFO - Anonymized data retrieved with columns: ['id', 'titulo', 'precio', 'descripcion', 'categoria', 'imagen', 'fecha_ingesta']
+2024-08-19 18:09:07,741 ::DataConnectionModule-> root - INFO - Redshift Connection Settings:: {'REDSHIFT_USERNAME': 'fedepr2345_coderhouse', 'REDSHIFT_PASSWORD': '5W9Nsos3e4', 'REDSHIFT_HOST': 'data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com', 'REDSHIFT_PORT': '5439', 'REDSHIFT_DBNAME': 'data-engineer-database'}
+2024-08-19 18:09:07,741 ::DataConnectionModule-> root - INFO - DataConn initialize with the schema: public
+2024-08-19 18:09:07,814 ::DataConnectionModule-> root - INFO - Connecting to Redshift at data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com:5439 as fedepr2345_coderhouse
+2024-08-19 18:09:08,777 ::DataConnectionModule-> root - ERROR - Failed to create connection: (psycopg2.OperationalError) connection to server at "data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com" (52.44.43.227), port 5439 failed: FATAL:  unrecognized configuration parameter "standard_conforming_strings"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-08-19 18:09:08,777 ::DataConnectionModule-> root - ERROR - Error establishing a connection to the database: Failed to create a connection to Redshift.
+2024-08-19 18:09:08,778 ::DataConnectionModule-> root - INFO - Data uploaded to -> fedepr2345_coderhouse.products
+2024-08-19 18:09:08,778 ::DataConnectionModule-> root - WARNING - No active connection to close.
+2024-08-19 18:18:30,969 ::DataConnectionModule-> root - INFO - DataConn initialize with the schema: fedepr2345_coderhouse
+2024-08-19 18:18:30,969 ::DataConnectionModule-> root - INFO - DataRetriever initialized with endpoint: https://fakestoreapi.com/products
+2024-08-19 18:18:30,970 ::DataConnectionModule-> root - INFO - Empezando a anonimizar los datos.
+2024-08-19 18:18:30,970 ::DataConnectionModule-> root - INFO - Intentado recuperar data de la API.
+2024-08-19 18:18:31,607 ::DataConnectionModule-> root - INFO - Data obtenida:    id                                              title  ...                                              image                       rating
+0   1  Fjallraven - Foldsack No. 1 Backpack, Fits 15 ...  ...  https://fakestoreapi.com/img/81fPKd-2AYL._AC_S...  {'rate': 3.9, 'count': 120}
+1   2             Mens Casual Premium Slim Fit T-Shirts   ...  https://fakestoreapi.com/img/71-3HjGNDUL._AC_S...  {'rate': 4.1, 'count': 259}
+2   3                                 Mens Cotton Jacket  ...  https://fakestoreapi.com/img/71li-ujtlUL._AC_U...  {'rate': 4.7, 'count': 500}
+3   4                               Mens Casual Slim Fit  ...  https://fakestoreapi.com/img/71YXzeOuslL._AC_U...  {'rate': 2.1, 'count': 430}
+4   5  John Hardy Women's Legends Naga Gold & Silver ...  ...  https://fakestoreapi.com/img/71pWzhdJNwL._AC_U...  {'rate': 4.6, 'count': 400}
+
+[5 rows x 7 columns]
+2024-08-19 18:18:31,644 ::DataConnectionModule-> root - INFO - Data anonymize:    id                                             titulo  precio  ...       categoria                                             imagen fecha_ingesta
+0   1  Fjallraven - Foldsack No. 1 Backpack, Fits 15 ...  109.95  ...  men's clothing  https://fakestoreapi.com/img/81fPKd-2AYL._AC_S...    2024-08-19
+1   2             Mens Casual Premium Slim Fit T-Shirts    22.30  ...  men's clothing  https://fakestoreapi.com/img/71-3HjGNDUL._AC_S...    2024-08-19
+2   3                                 Mens Cotton Jacket   55.99  ...  men's clothing  https://fakestoreapi.com/img/71li-ujtlUL._AC_U...    2024-08-19
+3   4                               Mens Casual Slim Fit   15.99  ...  men's clothing  https://fakestoreapi.com/img/71YXzeOuslL._AC_U...    2024-08-19
+4   5  John Hardy Women's Legends Naga Gold & Silver ...  695.00  ...        jewelery  https://fakestoreapi.com/img/71pWzhdJNwL._AC_U...    2024-08-19
+
+[5 rows x 7 columns]
+2024-08-19 18:18:31,644 ::DataConnectionModule-> root - INFO - Anonymized data retrieved with columns: ['id', 'titulo', 'precio', 'descripcion', 'categoria', 'imagen', 'fecha_ingesta']
+2024-08-19 18:18:31,659 ::DataConnectionModule-> root - INFO - Redshift Connection Settings:: {'REDSHIFT_USERNAME': 'fedepr2345_coderhouse', 'REDSHIFT_PASSWORD': '5W9Nsos3e4', 'REDSHIFT_HOST': 'data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com', 'REDSHIFT_PORT': '5439', 'REDSHIFT_DBNAME': 'data-engineer-database'}
+2024-08-19 18:18:31,659 ::DataConnectionModule-> root - INFO - DataConn initialize with the schema: public
+2024-08-19 18:18:31,711 ::DataConnectionModule-> root - INFO - Connecting to Redshift at data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com:5439 as fedepr2345_coderhouse
+2024-08-19 18:18:34,118 ::DataConnectionModule-> root - ERROR - Failed to create connection: (psycopg2.errors.UndefinedObject) unrecognized configuration parameter "standard_conforming_strings"
+
+[SQL: show standard_conforming_strings]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-08-19 18:18:34,119 ::DataConnectionModule-> root - ERROR - Error establishing a connection to the database: Failed to create a connection to Redshift.
+2024-08-19 18:18:34,119 ::DataConnectionModule-> root - INFO - Data uploaded to -> fedepr2345_coderhouse.products
+2024-08-19 18:18:34,119 ::DataConnectionModule-> root - WARNING - No active connection to close.
+2024-08-19 18:21:49,143 ::DataConnectionModule-> root - INFO - DataConn initialize with the schema: fedepr2345_coderhouse
+2024-08-19 18:21:49,143 ::DataConnectionModule-> root - INFO - DataRetriever initialized with endpoint: https://fakestoreapi.com/products
+2024-08-19 18:21:49,143 ::DataConnectionModule-> root - INFO - Empezando a anonimizar los datos.
+2024-08-19 18:21:49,143 ::DataConnectionModule-> root - INFO - Intentado recuperar data de la API.
+2024-08-19 18:21:49,971 ::DataConnectionModule-> root - INFO - Data obtenida:    id                                              title  ...                                              image                       rating
+0   1  Fjallraven - Foldsack No. 1 Backpack, Fits 15 ...  ...  https://fakestoreapi.com/img/81fPKd-2AYL._AC_S...  {'rate': 3.9, 'count': 120}
+1   2             Mens Casual Premium Slim Fit T-Shirts   ...  https://fakestoreapi.com/img/71-3HjGNDUL._AC_S...  {'rate': 4.1, 'count': 259}
+2   3                                 Mens Cotton Jacket  ...  https://fakestoreapi.com/img/71li-ujtlUL._AC_U...  {'rate': 4.7, 'count': 500}
+3   4                               Mens Casual Slim Fit  ...  https://fakestoreapi.com/img/71YXzeOuslL._AC_U...  {'rate': 2.1, 'count': 430}
+4   5  John Hardy Women's Legends Naga Gold & Silver ...  ...  https://fakestoreapi.com/img/71pWzhdJNwL._AC_U...  {'rate': 4.6, 'count': 400}
+
+[5 rows x 7 columns]
+2024-08-19 18:21:50,014 ::DataConnectionModule-> root - INFO - Data anonymize:    id                                             titulo  precio  ...       categoria                                             imagen fecha_ingesta
+0   1  Fjallraven - Foldsack No. 1 Backpack, Fits 15 ...  109.95  ...  men's clothing  https://fakestoreapi.com/img/81fPKd-2AYL._AC_S...    2024-08-19
+1   2             Mens Casual Premium Slim Fit T-Shirts    22.30  ...  men's clothing  https://fakestoreapi.com/img/71-3HjGNDUL._AC_S...    2024-08-19
+2   3                                 Mens Cotton Jacket   55.99  ...  men's clothing  https://fakestoreapi.com/img/71li-ujtlUL._AC_U...    2024-08-19
+3   4                               Mens Casual Slim Fit   15.99  ...  men's clothing  https://fakestoreapi.com/img/71YXzeOuslL._AC_U...    2024-08-19
+4   5  John Hardy Women's Legends Naga Gold & Silver ...  695.00  ...        jewelery  https://fakestoreapi.com/img/71pWzhdJNwL._AC_U...    2024-08-19
+
+[5 rows x 7 columns]
+2024-08-19 18:21:50,015 ::DataConnectionModule-> root - INFO - Anonymized data retrieved with columns: ['id', 'titulo', 'precio', 'descripcion', 'categoria', 'imagen', 'fecha_ingesta']
+2024-08-19 18:21:50,031 ::DataConnectionModule-> root - INFO - Redshift Connection Settings:: {'REDSHIFT_USERNAME': 'fedepr2345_coderhouse', 'REDSHIFT_PASSWORD': '5W9Nsos3e4', 'REDSHIFT_HOST': 'data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com', 'REDSHIFT_PORT': '5439', 'REDSHIFT_DBNAME': 'data-engineer-database'}
+2024-08-19 18:21:50,031 ::DataConnectionModule-> root - INFO - DataConn initialize with the schema: public
+2024-08-19 18:21:50,063 ::DataConnectionModule-> root - INFO - Connecting to Redshift at data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com:5439 as fedepr2345_coderhouse
+2024-08-19 18:21:52,773 ::DataConnectionModule-> root - INFO - Connection created
+2024-08-19 18:21:52,928 ::DataConnectionModule-> root - INFO - Connection verified successfully.
+2024-08-19 18:21:53,436 ::DataConnectionModule-> root - ERROR - Error loading data to Redshift: not all arguments converted during string formatting
+2024-08-19 18:21:53,437 ::DataConnectionModule-> root - INFO - Connection to Redshift closed.
+2024-08-19 18:21:53,437 ::DataConnectionModule-> root - INFO - Data uploaded to -> fedepr2345_coderhouse.products
+2024-08-19 18:21:53,437 ::DataConnectionModule-> root - WARNING - No active connection to close.
